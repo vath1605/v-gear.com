@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
+.logo img{
+    height: 50px;
+    object-fit: cover;
+}
+#bd{
+    width: 100%;
+    height: 100vh;
+}
+#header{
+    z-index: 99;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+}
+#home{
+    background-color: rgb(41, 78, 112);
+}
+.box1 {
+    /* width: 100; */
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.box1 img{
+    width: auto;
+    object-fit: cover;
+    position: absolute;
+    filter: drop-shadow(10px 50px 30px rgb(26, 26, 26));
+    left: -150px;
+    transition: all 1s;
+}
+.box1:hover img{
+    transform: rotate3d(0, 10, 2, 180deg);
+    transition: all 1s;
+}
+.box2{
+    padding: 70px;
+}
+.box2 h1{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+}
+#box5 p{
+    color: rgb(76, 76, 76);
+}
+.box3 {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.box3 img{
+    filter: hue-rotate(90deg) brightness(1.2) contrast(1.5);
+    width: 80%;
+    object-fit: cover;
+    position: absolute;
+    filter: drop-shadow(0 0 1px rgb(255, 255, 255));
+    left: 50px;
+    top: 50px;
+}
+#about{
+    background-color: rgb(255, 255, 255);
+}
+#box5{
+    padding: 70px;
+    font-size: 20px;
+}
+#box5 h1{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    color: rgb(74, 74, 74);
+    margin-left: 40px;
+}
+#box5 ul {
+    list-style-type: none;
+}
+#box5 ul li i{
+    color: rgb(0, 203, 0);
+}
+#box5 ul li{
+    color: rgb(49, 49, 49);
+    margin-top: 5px;
+}
+#slide{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+#bg{
+    background-color: #294e70;
+}
+#slide h1{
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#wrapper {
+	display: block;
+	width: 100%;
+	height: 80%;
+	/* overflow-y: hidden; */
+}
+#slider {
+	position: relative;
+	width:75%;
+	height: 100%;
+	perspective: 300rem;
+	transform-style: preserve-3d;
+}
+#slider li {
+	position: absolute;
+	left: 17.5%;
+	width: 100%;
+	height: 100%;
+	animation-iteration-count: infinite;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.25rem 1rem 0.125rem rgb(232, 232, 232);
+	overflow: hidden;
+}
+#slider:hover li {
+	animation-play-state: paused;
+}
+#slider li img {
+	width: 100%;
+	height: 100%;
+	object-fit:contain;
+    background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+    object-position: center;
+}
+#theme{
+    width: 100%;
+    height: 50vh;
+    background-color: #00d5ff00;
+}
+.navbar-nav a{
+    position: relative;
+}
+.navbar-nav a:hover::before{
+    content: "";
+    width: 45%;
+    bottom: 5px;
+    border: 1.5px solid red;
+    position: absolute;
+    right: 50%;
+}
+.navbar-nav a::before{
+    content: "";
+    width: 0;
+    bottom: 5px;
+    border: 1.5px solid rgba(255, 0, 0, 0);
+    position: absolute;
+    right: 50%;
+    transition: all 0.6s;
+}
+.navbar-nav a::after{
+    content: "";
+    width: 0;
+    bottom: 5px;
+    border: 1.5px solid rgba(255, 0, 0, 0);
+    position: absolute;
+    left: 50%;
+    transition: all 0.6s;
+}
+.navbar-nav a:hover::after{
+    content: "";
+    width: 45%;
+    bottom: 5px;
+    border: 1.5px solid red;
+    position: absolute;
+    left: 50%;
+    transition: all 0.6s;
+}
+.media ul{
+    list-style: none;
+}
+.media h1{
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+}
+.media h1::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: brown;
+    transition: all ease-out 0.6s;
+    bottom: 0;
+}
+.media:hover h1::before{
+    bottom: 0;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: brown;
+    transition: all ease-out 0.6s;
+}
+.media ul li a i{
+    font-size: 20px;
+    color: #020024;
+    transition: all 0.6s;
+}
+.media ul li a{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    text-decoration: none;
+    color: #294e70;
+    font-size: 20px;
+    transition: all 0.6s;
+}
+.media ul li a:hover i{
+    transform: scale(1.2);
+    transition: all 0.6s;
+}
+.media ul li:hover a {
+    transform: scale(1.2);
+    font-size: x-large;
+    transition: all 0.6s;
+    color: rgb(255, 0, 0);
+}
+.media ul li:hover a i{
+    transform: scale(1.2);
+    font-size: x-large;
+    transition: all 0.6s;
+    color: rgb(255, 0, 0);
+}
+.brand h1{
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+}
+.brand ul li {
+    list-style-type: none;
+}
+.brand ul li a img{
+    width: 40px;
+    transition: all 0.6s;
+}
+.brand ul li a {
+    text-decoration: none;
+    color: #020024;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+}
+.brand ul li a:hover img{
+    transform: scale(1.4);
+    transition: all 0.6s;
+}
+.phone h1{
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+}
+.phone ul li{
+    list-style-type: none;
+}
+.phone ul li img{
+    width: 30px;
+}
+.phone ul li a{
+    text-decoration: none;
+    font-family: "Signika", sans-serif;
+    font-optical-sizing: auto;
+    color: #090979;
+    cursor: no-drop;
+}
+.phone ul li i{
+    font-size: 18px;
+    color: #020024;
+}
+.location h1{
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+}
+.location ul li{
+    list-style-type: none;
+}
+.location ul li a i{
+    color: #294e70;
+}
+.brand h1::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: brown;
+    transition: all ease-out 0.6s;
+    bottom: 0;
+}
+.brand:hover h1::before{
+    bottom: 0;
+    content: "";
+    position: absolute;
+    width: 57%;
+    height: 2px;
+    background-color: brown;
+    transition: all ease-out 0.6s;
+}
+.phone h1::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: brown;
+    transition: all ease-out 0.6s;
+    bottom: 0;
+}
+.phone:hover h1::before{
+    bottom: 0;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: brown;
+    transition: all ease-out 0.6s;
+}
+.location h1::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: brown;
+    transition: all ease-out 0.6s;
+    bottom: 0;
+}
+.location:hover h1::before{
+    bottom: 0;
+    content: "";
+    position: absolute;
+    width: 72%;
+    height: 2px;
+    background-color: rgb(216, 41, 41);
+    transition: all ease-out 0.6s;
+}
+#myInput {
+    margin-bottom: 12px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.card {
+    width: 444px;
+  }
+  #iCon{
+    width: 25px;
+  }
+  #card{
+    border-radius: 10px;
+  }
+  .list{
+    width: 400px;
+    height: auto;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    position: fixed;
+    display: none;
+    overflow: hidden;
+  }
+  .list img{
+    width: 80px;
+  }
+  .count{
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #312c2c;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -15px;
+    right: -15px;
+  }
+  .count{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(224, 224, 224);
+  }
+  .nav-item i{
+    position: relative;
+  }
+  #toggle{
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+  }
+  #img img{
+    transition: all 0.6s ease-in;
+  }
+  #img:hover img{
+    transform: scale(1.2);
+    transition: all 0.6s ease-out;
+  }
+  #card img{
+    transition: all 0.6s ease-in-out;
+  }
+#cart{
+    display: block;
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-GEAR</title>
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="">
+	<style>
+	body {
+    height: 3300px;
+    background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
+  	}
+	</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light position-fixed px-5 me-0" id="header">
+        <div class="container-fluid d-flex justify-content-between">
+          <div class="container col-xl-8 col-lg-8 col-md-1 col-sm-1 col-1">
+          <a class="navbar-brand logo" href="./project.html"><img src="./logo.png" alt=""></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+            <ul class="navbar-nav ms-5">
+              <li class="nav-item ms-5" >
+                <a class="nav-link active" aria-current="page" href="./project.html">Home</a>
+              </li>
+                <li class="nav-item ms-5 mt-2" >
+                    <i class="fa-solid fa-cart-plus" id="toggle" onclick="cartView()"> <div class="count align-middle">
+                        0
+                    </div></i>
+                    
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 mx-auto mt-5">
+                <form action="">
+                    <input type="search" class="form-control" id="input"  placeholder="Search Product..">
+                </form>
+            </div>
+        </div>
+      </div>
+        <div class="container-fluid mt-3">
+            <div class="row con">
+                
+		 </div>
+    <div class="list rounded mt-5">
+        <div class="row">
+    	<table class="table text-center">
+			<thead>
+				<tr>
+				<th>Computer</th>
+				<th>Model</th>
+				<th>Price</th>
+				<th>Cancel</th>
+				</tr>
+			</thead>
+			<tbody class="tData">
+				
+			</tbody>
+			<footer>
+				<tr id="pay">
+					<th class="float-end">
+						Payment: 0.00
+					</th>
+				</tr>
+			</footer>
+		</table>
+        </div>
+    </div>
+	<script>
+		let search = document.querySelector('#input');
+		search.addEventListener('keyup', () => {
+    let txt = search.value.toLowerCase();
+    let cart = document.querySelectorAll('#cart');
+
+    cart.forEach(p => {
+        let Name = p.getAttribute('data-name').toLowerCase();
+        if (Name.includes(txt)) {
+            p.style.display = 'block';
+			// showPro();
+        } else {
+            p.style.display = 'none';
+			// showPro();
+        }
+    });
+});
+	</script>
+</body>
+</html>
+<script src="./project.js"></script>
+<script src="./bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+<script src="./js2.js"></script>
+<script>
+    let pro = [
+		{
+			icons :"./apple.png",
+			img :"./pro2.PNG",
+			brand :"APPLE",
+			model :"MacBook Pro 2017",
+			price :999,
+			tax :199,
+			data: "MacBook Pro 2017",
+			total :1198.00
+		},
+		{
+			icons :"./apple.png",
+			img :"./pro3.PNG",
+			brand :"APPLE",
+			model :"MacBook Pro M1",
+			price :1200,
+			tax :150,
+			data:"MacBook Pro M1",
+			total :1350.00
+		},
+		{
+			icons :"./hp.png",
+			img :"./pro4.PNG",
+			brand :"HP",
+			model :"HP Gaming",
+			price :700,
+			tax :200,
+			data : "HP Gaming",
+			total :900.00
+		},
+		{
+			icons :"./msi.png",
+			img :"./pro5.PNG",
+			brand :"MSI",
+			model :"MSI Katalina 17",
+			price :1500,
+			tax :199,
+			data: "MSI Katalina 17",
+			total :1699.00
+		},
+		{
+			icons :"./msi.png",
+			img :"./pro6.PNG",
+			brand :"MSI",
+			model :"MSI Katalina 18",
+			price :1600,
+			tax :199,
+			data:"MSI Katalina 18",
+			total :1799.00
+		},
+		{
+			icons :"./apple.png",
+			img :"./pro7.PNG",
+			brand :"APPLE",
+			model :"MacBook Pro M3 16",
+			price :2000,
+			tax :199,
+			data:"MacBook Pro M3 16",
+			total :2199.00
+		},
+		{
+			icons :"./razer.png",
+			img :"./pro8.PNG",
+			brand :"RAZER",
+			model :"Razer R9",
+			price :800,
+			tax :199,
+			data :"Razer R9",
+			total :999.00
+		},
+		{
+			icons :"./razer.png",
+			img :"./pro9.PNG",
+			brand :"RAZER",
+			model :"Razer 16",
+			price :800,
+			tax :199,
+			data :"Razer 16",
+			total :999.00
+		},
+		{
+			icons :"./asus.png",
+			img :"./pro10.PNG",
+			brand :"ASUS",
+			model :"ROG Strix G713",
+			price :999,
+			tax :0,
+			data :"ROG Strix G713",
+			total :999.00
+		},
+		{
+			icons :"./hp.png",
+			img :"./pro11.PNG",
+			brand :"HP",
+			model :"HP Gaming",
+			price :1000,
+			tax :199,
+			data: "HP Gaming",
+			total :1199.00
+		},
+		{
+			icons :"./hp.png",
+			img :"./pro12.PNG",
+			brand :"HP",
+			model :"HP Victus",
+			price :999,
+			tax :199,
+			data: "HP Victus",
+			total :1198.00
+		},
+		{
+			icons :"./asus.png",
+			img :"./pro13.PNG",
+			brand :"ASUS	",
+			model :"TUF A15",
+			price :789,
+			tax :0,
+			data:"TUF A15",
+			total :789.00
+		},
+		{
+			icons :"./msi.png",
+			img :"./pro14.PNG",
+			brand :"MSI",
+			model :"MSI Titan",
+			price :6399,
+			tax :500,
+			data: "MSI Titan",
+			total :6899.00
+		},
+		{
+			icons :"./razer.png",
+			img :"./pro15.PNG",
+			brand :"RAZER",
+			model :"Razer 18",
+			price :999,
+			tax :199,
+			data:"Razer 18",
+			total :1198.00
+		},
+		{
+			icons :"./dell.png",
+			img :"./pro16.PNG",
+			brand :"DELL",
+			model :"Alienware M18",
+			price :2400,
+			tax :500,
+			data: "Alienware M18",
+			total :2900.00
+		},
+		{
+			icons :"./dell.png",
+			img :"./pro17.PNG",
+			brand :"DELL",
+			model :"Alienware X18",
+			price :3000,
+			tax :500,
+			data:"Alienware X18",
+			total :3500.00
+		},
+		{
+			icons :"./asus.png",
+			img :"./pro18.PNG",
+			brand :"ASUS",
+			model :"ROG Duo",
+			price :2499,
+			tax :0,
+			data:"ROG Duo",
+			total :2499.00
+		},
+		{
+			icons :"./hp.png",
+			img :"./pro19.PNG",
+			brand :"HP",
+			model :"Predator M19",
+			price :1299,
+			tax :500,
+			data:"Predator M19",
+			total :1799.00
+		},
+		{
+			icons :"./dell.png",
+			img :"./pro20.PNG",
+			brand :"DELL",
+			model :"Alienware X19",
+			price :3400,
+			tax :500,
+			data:"Alienware X19",
+			total :3900.00
+		},
+		{
+			icons :"./apple.png",
+			img :"./pro21.PNG",
+			brand :"APPLE",
+			model :"MacBook Pro M4",
+			price :3990,
+			tax :500,
+			data:"MacBook Pro M4",
+			total :4490.00
+		}
+	];
+		let i=0;
+		function showPro(){
+            let con = document.querySelector('.con');
+		let setPro = '';
+		pro.forEach(element => {
+			setPro+=`
+			<div data-name="${element.data}" class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" id="cart">
+                    <div id="ul" class="d-flex justify-content-center  container mt-5">
+                        <div id="card" class="card p-2 bg-light"><img src="${element.icons}" id="iCon" alt="">
+                            <div class="about-product text-center mt-2" id="img"><img src="${element.img}" width="300">
+                                <div class="li">
+                                    <h4>${element.brand}</h4>
+                                    <h6 class="mt-0 text-black-50">${element.model}</h6>
+                                </div>
+                            </div>
+                            <div class="stats mt-2 mx-3">
+                                <div class="d-flex justify-content-between p-price"><span>Price</span><span>$${element.price}</span></div>
+                                <div class="d-flex justify-content-between p-price"><span>Tax</span><span>$${element.tax}</span></div>
+                            </div>
+                            <div class="d-flex mx-3 justify-content-between total font-weight-bold mt-4"><span>Total</span><span>$${element.total}</span></div>
+                            <button type="submit" onclick="addCart(${i++})" class="mb-2 btn btn-outline-dark mt-3"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+			`;
+			con.innerHTML=setPro;
+		});
+        }
+        showPro();
+        let productStore = [...new Set(pro.map((item)=>{
+            return item;
+        }))];
+
+            let cart=[];
+        function addCart(e){
+            cart.push({...productStore[e]});
+            displayCart();
+        }
+		 
+		let count = document.querySelector('.count');
+
+		function displayCart(){
+			let j=0; let pay = 0 ;
+				count.innerHTML=cart.length;
+				let item ='';
+					cart.map((e)=>{
+						let {img, model , total}=e;
+						pay += total;
+						item += `
+						<tr>
+					<td><img src="${img}" alt=""></td>
+					<td class="align-middle" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >${model}</td>
+					<td class="align-middle" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">$${total}</td>
+					<td class="align-middle" style="color: rgb(188, 45, 45);text-shadow: 0 0 2px rgb(0, 0, 0);font-size: 20px; cursor: pointer;"><i class="fa-solid fa-trash" onclick="Delete(${j++})"></i></td>
+						</tr>
+						`;
+						document.querySelector('.tData').innerHTML=item;
+					})
+					document.querySelector('#pay').innerHTML = `
+					<th class="float-end">
+						Payment:$ ${pay}
+					</th>
+					`;
+		}
+		function Delete(index){
+			if(window.confirm("You sure to Cancel?")){
+				cart.splice(index,1);
+				displayCart();
+			}
+			else{
+				alert("Product keep on cart.");
+			}
+		}
+
+		
+</script>
